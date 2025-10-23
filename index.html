@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cookbook</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-text">My Cookbook</a>
+  
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+  
+  <nav>
+    <a href="index.html">Recipes</a>
+    <a href="help.html">Help</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <section>
+    <h1>Welcome to My Cookbook</h1>
+    <p>Discover amazing recipes for every meal.</p>
+  </section>
+
+  <section class="search-filter">
+    <form action="index.html" method="get">
+      <input type="text" name="search" placeholder="Search recipes..." class="search-bar">
+      <select name="category" class="filter-dropdown">
+        <option value="">All Categories</option>
+        <option value="chicken">Chicken</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="dessert">Dessert</option>
+      </select>
+      <button type="submit" class="button">Search</button>
+    </form>
+  </section>
+
+  <section class="grid-container">
+    <div class="recipe-card">
+      <img src="images/ancho-orange-chicken.jpeg" alt="Ancho-Orange Chicken">
+      <div class="cook-time">45m</div>
+      <h2>Ancho-Orange Chicken</h2>
+      <h4>With Kale Rice & Roasted Carrots</h4>
+      <p>We’re amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice.</p>
+      <a href="recipe.html" class="button">View Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+      <img src="images/ancho-orange-chicken.jpeg" alt="Ancho-Orange Chicken">
+      <div class="cook-time">45m</div>
+      <h2>Ancho-Orange Chicken</h2>
+      <h4>With Kale Rice & Roasted Carrots</h4>
+      <p>We’re amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice.</p>
+      <a href="recipe.html" class="button">View Recipe</a>
+    </div>
+
+    <div class="recipe-card">
+      <img src="images/ancho-orange-chicken.jpeg" alt="Ancho-Orange Chicken">
+      <div class="cook-time">45m</div>
+      <h2>Ancho-Orange Chicken</h2>
+      <h4>With Kale Rice & Roasted Carrots</h4>
+      <p>We’re amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice.</p>
+      <a href="recipe.html" class="button">View Recipe</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 My Cookbook. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
