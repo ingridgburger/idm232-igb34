@@ -59,7 +59,7 @@ if (!$result) {
 
     <div class="header-top-row">
       <h1>Welcome to My Cookbook</h1>
-      <a href="help.php" class="help-link"></a>
+      <a href="help.html" class="help-link"></a>
     </div>
 
     <p class="header-subtitle">Discover amazing recipes for every meal.</p>
@@ -102,7 +102,6 @@ if (!$result) {
 
   </div>
 </header>
-
 
 <main class="main-content">
   <?php if ($result->num_rows > 0) { ?>
@@ -158,7 +157,6 @@ if (!$result) {
   <?php } else { ?>
     <section class="grid-container">
       <p>No recipes found.</p>
-    </section>
   <?php } ?>
 
 </main>

@@ -82,13 +82,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <?php if ($recipe) { ?>
-      <?php echo $recipe['Title']; ?> | My Cookbook
-    <?php } else { ?>
-      Recipe Not Found | My Cookbook
-    <?php } ?>
-  </title>
+  <title>My Cookbook</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -103,7 +97,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 </header>
 
 <?php if ($recipe) { ?>
-
 <section class="recipe-hero">
   <img
     src="images/<?php echo $recipe['Main IMG']; ?>"
@@ -138,7 +131,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 </section>
 
 <section class="recipe-details">
-
   <h2>Overview</h2>
   <p><?php echo $recipe['Description']; ?></p>
 
@@ -182,7 +174,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 </section>
 
 <?php } else { ?>
-
 <main class="main-content">
   <section class="intro-section">
     <h1>Recipe Not Found</h1>
@@ -190,7 +181,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     <a href="index.php" class="button">Back to Home</a>
   </section>
 </main>
-
 <?php } ?>
 
 <footer>

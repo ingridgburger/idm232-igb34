@@ -6,7 +6,7 @@
       'DB_NAME'     => $_SERVER['REDIRECT_DB_NAME']     ?? $_SERVER['DB_NAME']     ?? null
   ];
 
-  $env_vars['DB_NAME'] = 'idm232-igb34';
+  $env_vars['DB_NAME'] = 'igb34_db';
 
   if (in_array(null, $env_vars, true)) {
       die('Missing required environment variables');
@@ -23,3 +23,4 @@
       die('Connection failed: ' . $connection->connect_error);
   }
 ?>
+
