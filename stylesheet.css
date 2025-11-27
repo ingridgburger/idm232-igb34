@@ -243,17 +243,11 @@ section {
   background-color: var(--dark-2);
 }
 
-.header-link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
 @media (max-width: 768px) {
   .page-header {
     position: static;
     margin: 0 -1rem 2rem -1rem;
-    padding: 1.25rem 1rem 1.25rem 1rem;
+    padding: 1.25rem 2.5rem 1.25rem 2.5rem;
   }
 
   .header-top-row {

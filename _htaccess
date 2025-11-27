@@ -1,4 +1,0 @@
-SetEnv DB_SERVER localhost
-SetEnv DB_USERNAME igb34
-SetEnv DB_PASSWORD vPAJYN7LF7g0Vj0I
-SetEnv DB_NAME igb34_db
