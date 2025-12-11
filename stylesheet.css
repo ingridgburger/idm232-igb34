@@ -185,7 +185,21 @@ section {
 .filter-dropdown,
 .search-filter .button {
   height: 44px;
+  max-height: 44px;
   box-sizing: border-box;
+}
+
+.search-bar input,
+.filter-dropdown select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
 .search-bar,
@@ -201,7 +215,9 @@ section {
 }
 
 .search-bar:focus,
-.filter-dropdown:focus {
+.filter-dropdown:focus,
+.search-bar input:focus,
+.filter-dropdown select:focus {
   outline: 2px solid var(--dark-1);
 }
 
@@ -250,12 +266,12 @@ section {
   }
 
   .search-bar,
-  .filter-dropdown {
-    max-width: 100%;
-  }
-
+  .filter-dropdown,
   .search-filter .button {
-    width: 100%;
+    height: 40px;
+    max-height: 40px;
+    padding: 0 1.25rem;
+    max-width: 100%;
   }
 
   .help-link {
@@ -269,7 +285,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 1000;
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
 
 .recipe-back-link {
@@ -328,7 +344,6 @@ footer {
 }
 
 /*  GRID */
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

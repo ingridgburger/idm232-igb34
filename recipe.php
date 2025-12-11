@@ -125,8 +125,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         | Protein: <?php echo $recipe['Protein']; ?>
       <?php } ?>
     </p>
-
-    <a href="index.php" class="button">Back to Home</a>
   </div>
 </section>
 
