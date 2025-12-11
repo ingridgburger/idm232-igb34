@@ -80,33 +80,17 @@ p {
 }
 
 @media (max-width: 920px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.15rem;
-  }
-  p {
-    font-size: 0.95rem;
-  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.15rem; }
+  p { font-size: 0.95rem; }
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.1rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.1rem; }
+  p { font-size: 0.9rem; }
 }
 
 /* Layout wrappers */
@@ -124,7 +108,7 @@ section {
 .page-header {
   background-color: var(--accent);
   margin: 0 -1.5rem 2.5rem -1.5rem;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -178,7 +162,7 @@ section {
 }
 
 .help-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0,0,0,0.05);
   transform: translateY(-1px);
 }
 
@@ -231,11 +215,9 @@ section {
   font-weight: 600;
   font-size: 0.9rem;
   padding: 0 1.8rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease;
-  width: auto;
 }
 
 .search-filter .button:hover {
@@ -247,7 +229,7 @@ section {
   .page-header {
     position: static;
     margin: 0 -1rem 2rem -1rem;
-    padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+    padding: 1.25rem 2.5rem;
   }
 
   .header-top-row {
@@ -269,13 +251,11 @@ section {
 
   .search-bar,
   .filter-dropdown {
-    flex: 1 1 auto;
     max-width: 100%;
   }
 
   .search-filter .button {
     width: 100%;
-    text-align: center;
   }
 
   .help-link {
@@ -347,19 +327,26 @@ footer {
   margin-top: auto;
 }
 
-/* Recipe grid */
+/*  GRID */
+
 .grid-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 1.5rem 0 0 0;
   width: 100%;
+  padding: 1.5rem 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
   .grid-container {
-    gap: 1.5rem;
     grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 1rem 0 0 0;
   }
 }
@@ -372,12 +359,47 @@ footer {
   overflow: hidden;
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .recipe-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
+}
+
+.recipe-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* square */
+  overflow: hidden;
+}
+
+.recipe-card-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-card-image-wrapper .cook-time {
+  align-items: center;
+  background-color: var(--dark-1);
+  border-radius: 50%;
+  color: var(--light-1);
+  display: flex;
+  font-family: var(--font-sans-serif);
+  font-weight: 600;
+  font-size: 0.8rem;
+  height: 50px;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+  z-index: 10;
 }
 
 .recipe-card h2 {
@@ -428,26 +450,6 @@ footer {
   align-items: center;
 }
 
-.recipe-card-image-wrapper .cook-time {
-  align-items: center;
-  background-color: var(--dark-1);
-  border-radius: 50%;
-  color: var(--light-1);
-  display: flex;
-  font-family: var(--font-sans-serif);
-  font-weight: 600;
-  font-size: 0.8rem;
-  height: 50px;
-  justify-content: center;
-  position: absolute;
-  right: 20px;
-  text-align: center;
-  top: 20px;
-  width: 50px;
-  z-index: 10;
-}
-
-
 /* Recipe hero */
 .recipe-hero {
   align-items: center;
@@ -470,7 +472,7 @@ footer {
 }
 
 .recipe-hero-overlay {
-  background-color: rgba(26, 26, 26, 0.55);
+  background-color: rgba(26,26,26,0.55);
   height: 100%;
   left: 0;
   position: absolute;
@@ -536,7 +538,7 @@ footer {
 
 .recipe-step {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0,1fr);
   column-gap: 1.75rem;
   align-items: flex-start;
   margin-bottom: 2.25rem;
@@ -576,7 +578,6 @@ footer {
   }
 }
 
-
 /* Buttons */
 .button {
   background-color: var(--accent);
@@ -596,7 +597,7 @@ footer {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .card-button {
