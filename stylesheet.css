@@ -380,12 +380,6 @@ footer {
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
 }
 
-.recipe-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .recipe-card h2 {
   font-family: var(--font-bold);
   font-size: 1.25rem;
@@ -434,7 +428,7 @@ footer {
   align-items: center;
 }
 
-.recipe-card .cook-time {
+.recipe-card-image-wrapper .cook-time {
   align-items: center;
   background-color: var(--dark-1);
   border-radius: 50%;
@@ -452,6 +446,7 @@ footer {
   width: 50px;
   z-index: 10;
 }
+
 
 /* Recipe hero */
 .recipe-hero {

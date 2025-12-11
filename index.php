@@ -28,9 +28,39 @@ $sql = "SELECT
 if ($search !== '') {
   $like = '%' . $search . '%';
   $sql .= " AND (
-              `Title` LIKE '$like' 
-              OR `Subtitle` LIKE '$like' 
+              `Title` LIKE '$like'
+              OR `Subtitle` LIKE '$like'
               OR `Description` LIKE '$like'
+              OR `Protein` LIKE '$like'
+              OR `All Ingredients` LIKE '$like'
+              OR `All Steps` LIKE '$like'
+              OR `Ingredient #1` LIKE '$like'
+              OR `Ingredient #2` LIKE '$like'
+              OR `Ingredient #3` LIKE '$like'
+              OR `Ingredient #4` LIKE '$like'
+              OR `Ingredient #5` LIKE '$like'
+              OR `Ingredient #6` LIKE '$like'
+              OR `Ingredient #7` LIKE '$like'
+              OR `Ingredient #8` LIKE '$like'
+              OR `Ingredient #9` LIKE '$like'
+              OR `Ingredient #10` LIKE '$like'
+              OR `Ingredient #11` LIKE '$like'
+              OR `Ingredient #12` LIKE '$like'
+              OR `Ingredient #13` LIKE '$like'
+              OR `Step Title #1` LIKE '$like'
+              OR `Step Desc #1` LIKE '$like'
+              OR `Step Title #2` LIKE '$like'
+              OR `Step Desc #2` LIKE '$like'
+              OR `Step Title #3` LIKE '$like'
+              OR `Step Desc #3` LIKE '$like'
+              OR `Step Title #4` LIKE '$like'
+              OR `Step Desc #4` LIKE '$like'
+              OR `Step Title #5` LIKE '$like'
+              OR `Step Desc #5` LIKE '$like'
+              OR `Step Title #6` LIKE '$like'
+              OR `Step Desc #6` LIKE '$like'
+              OR `How To Name` LIKE '$like'
+              OR `HowTo/History Desc` LIKE '$like'
             )";
 }
 
@@ -80,17 +110,15 @@ if (!$result) {
 
           <?php
             $proteins = [
-              "Beef",
-              "Chicken",
-              "Fish",
-              "Pork",
-              "Steak",
-              "Turkey",
-              "Vegetarian"
+              'Vegetarian',
+              'Poultry',
+              'Beef',
+              'Pork',
+              'Fish'
             ];
 
             foreach ($proteins as $p) {
-              $selected = ($category === $p) ? "selected" : "";
+              $selected = ($category === $p) ? 'selected' : '';
               echo "<option value=\"$p\" $selected>$p</option>";
             }
           ?>
